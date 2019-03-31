@@ -3,28 +3,18 @@
 """
 Created on Fri Dec 22 15:37:23 2018
 @author: Pritam Ghosh
-@company: Wift Cap solutions pvt. LTD
 
 This module contains Graphical represantation of 
 Portfolio (return %) & s&p (return %) according to date
 
-Overview:
--
--
--
-
 """
+
 import pandas as pd
-
-# import mysql.connector
-# from mysql.connector import MySQLConnection, Error
-
-import sqlalchemy
-from sqlalchemy import create_engine
-
+import mysql.connector
+from mysql.connector import MySQLConnection, Error
 import matplotlib.pyplot as plt
-# from bokeh.palettes import Spectral11
-# from bokeh.plotting import figure, output_file, show
+from bokeh.palettes import Spectral11
+from bokeh.plotting import figure, output_file, show
 
 
 def connect_database():

@@ -3,15 +3,9 @@
 """
 Created on Fri Dec 7 16:37:23 2018
 @author: Pritam Ghosh
-@company: Wift Cap solutions pvt. LTD
 
 This module to fetch stocks from http://finance.yahoo.com using pandas dataReader
 then save data into Database
-
-Overview:
-- 
--
--
 
 """
 
@@ -22,24 +16,19 @@ from sqlalchemy import create_engine
 import pandas as pd
 from pandas_datareader import data, wb
 
-# import mysql.connector
-# from mysql.connector import MySQLConnection, Error
-
-# import requests_cache
+import mysql.connector
+from mysql.connector import MySQLConnection, Error
 
 
 def connect_database():
 	
-	# mydb = mysql.connector.connect(
-	#   host="localhost",
-	#   user="root",
-	#   passwd="root",
-	#   database="tradingstrategy"
-	# )
-	db_URL = "mysql+mysqldb://root:root@127.0.0.1:5432/quantrade"
-	engine = create_engine(db_URL)
-	mydb = engine.connect()
-	print(mydb)
+	mydb = mysql.connector.connect(
+	  host="localhost",
+	  user="root",
+	  passwd="root",
+	  database="tradingstrategy"
+	)
+
 	return mydb
 
 

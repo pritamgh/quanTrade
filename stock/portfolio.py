@@ -3,22 +3,13 @@
 """
 Created on Fri Dec 21 16:37:23 2018
 @author: Pritam Ghosh
-@company: Wift Cap solutions pvt. LTD
 
 This module for portfolio
 
-Overview:
-- 
--
--
-
 """
 
-# import mysql.connector
-# from mysql.connector import MySQLConnection, Error
-
-import sqlalchemy
-from sqlalchemy import create_engine
+import mysql.connector
+from mysql.connector import MySQLConnection, Error
 
 
 def connect_database():
